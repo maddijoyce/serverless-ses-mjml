@@ -1,0 +1,14 @@
+{
+  "name": "serverless-ses-mjml",
+  "version": "0.0.1",
+  "description": "Use MJML to generate email templates for AWS Simple Email Service",
+  "main": "index.js",
+  "repository": "https://github.com/maddijoyce/serverless-ses-mjml",
+  "author": "Maddi Joyce <maddi@maddijoyce.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "mjml": "4.1.0",
+    "opn": "5.3.0"
+  }
+}
