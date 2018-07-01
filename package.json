@@ -9,6 +9,7 @@
   "private": false,
   "dependencies": {
     "mjml": "4.1.0",
-    "opn": "5.3.0"
+    "opn": "5.3.0",
+    "temp-write": "3.4.0"
   }
 }
