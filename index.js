@@ -34,7 +34,7 @@ class ServerlessSESTemplatesPlugin {
     const template = templates.find(({ name }) => name === this.options.name);
     const { HtmlPart, TextPart } = this.generateParts(location, template);
 
-    const filePath = tempWrite(HtmlPart || TextPart, "template.html");
+    const filePath = tempWrite.sync(HtmlPart || TextPart, "template.html");
     opn(filePath);
   }
 
