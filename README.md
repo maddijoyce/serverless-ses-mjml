@@ -42,9 +42,17 @@ custom:
 
 ## Usage
 
-### `serverless deploy```
+### `serverless deploy`
 
 This command will deploy all SES template resources in the same CloudFormation template used by the other serverless resources.
+
+### `serverless preview-template --template Template`
+
+This command will convert your mjml template to html and open it in your browser.
+
+## Issues
+
+SES is only available in a limited number of regions. If you receive this uninformative error `The CloudFormation template is invalid: Template format error: Unrecognized resource types: [AWS::SES::Template]`, it possibly means you're trying to deploy an SES template in a region where it's not possible.
 
 ## Credits
 

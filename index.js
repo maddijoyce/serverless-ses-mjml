@@ -27,7 +27,7 @@ class ServerlessSesMjmlPlugin {
 
     this.hooks = {
       "preview-template:preview": () => this.buildAndPreview(),
-      "before:deploy:deploy": () => this.addResources()
+      "before:deploy:deploy": () => this.addResources(),
     };
   }
 
@@ -64,8 +64,8 @@ class ServerlessSesMjmlPlugin {
     return templates.reduce(
       (acc, template) =>
         Object.assign({}, acc, {
-          [`SESTemplate${this.getCfnName(name)}`]: {
-            Type: "AWS::SES::Template",
+          [`SESTemplate${this.getCfnName(template.name)}`]: {
+            Type: 'AWS::SES::Template',
             Properties: {
               Template: this.generateParts(location, template)
             }
